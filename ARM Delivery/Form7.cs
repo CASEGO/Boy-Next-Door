@@ -21,8 +21,7 @@ namespace ARM_Delivery
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "aRMDataSet1.Выручка". При необходимости она может быть перемещена или удалена.
             this.выручкаTableAdapter1.Fill(this.aRMDataSet1.Выручка);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "aRMDataSet.Выручка". При необходимости она может быть перемещена или удалена.
-            this.выручкаTableAdapter.Fill(this.aRMDataSet.Выручка);
+
 
 
 
@@ -40,8 +39,20 @@ namespace ARM_Delivery
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Otchet af = new Otchet();
+            af.Owner = this;
+            af.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
             MessageBox.Show("Я овощ - мне нужна помощь!", "Внимание!");
             return;
+        }
+
+        private void Form7_Activated(object sender, EventArgs e)
+        {
+            this.выручкаTableAdapter1.Fill(this.aRMDataSet1.Выручка);
         }
     }
 }
