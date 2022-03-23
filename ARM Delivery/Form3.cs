@@ -14,7 +14,7 @@ namespace ARM_Delivery
     
     public partial class Form3 : Form
     {
-        public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= C:\\Users\\Sense\\Desktop\\Шарага\\ОАиП\\курсач\\ARM.mdb";
+        public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= ARM.mdb";
         private OleDbConnection myConnection;
         public Form3()
         {
