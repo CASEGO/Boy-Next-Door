@@ -46,7 +46,7 @@ namespace ARM_Delivery
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Я овощ - мне нужна помощь!", "Внимание!");
+            MessageBox.Show("Для поиска в графу ввода впиши ФИО и нажми НАЙТИ КЛИЕНТА. Для удаления клиента в графу ввода впиши его код и нажми УДАЛИТЬ.", "Внимание!");
             return;
         }
 
@@ -85,6 +85,17 @@ namespace ARM_Delivery
         private void Form4_FormClosed(object sender, FormClosedEventArgs e)
         {
             myConnection.Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            int kod = Convert.ToInt32(textBox1.Text);
+            string query = "DELETE FROM Клиенты WHERE [Код клиента] = " + kod;
+            OleDbCommand command = new OleDbCommand(query, myConnection);
+            command.ExecuteNonQuery();
+            MessageBox.Show("Данные обновлены!");
+            dataGridView1.DataSource = клиентыBindingSource;
+            this.клиентыTableAdapter.Fill(this.aRMDataSet.Клиенты);
         }
     }
 }
