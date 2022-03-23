@@ -41,9 +41,14 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.отзывыTableAdapter = new ARM_Delivery.ARMDataSetTableAdapters.ОтзывыTableAdapter();
+            this.aRMDataSet1 = new ARM_Delivery.ARMDataSet1();
+            this.отзывыBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.отзывыTableAdapter1 = new ARM_Delivery.ARMDataSet1TableAdapters.ОтзывыTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.отзывыBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.отзывыBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -59,7 +64,7 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewCheckBoxColumn1,
             this.dataGridViewCheckBoxColumn2});
-            this.dataGridView1.DataSource = this.отзывыBindingSource;
+            this.dataGridView1.DataSource = this.отзывыBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(23, 24);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -142,6 +147,20 @@
             // 
             this.отзывыTableAdapter.ClearBeforeFill = true;
             // 
+            // aRMDataSet1
+            // 
+            this.aRMDataSet1.DataSetName = "ARMDataSet1";
+            this.aRMDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // отзывыBindingSource1
+            // 
+            this.отзывыBindingSource1.DataMember = "Отзывы";
+            this.отзывыBindingSource1.DataSource = this.aRMDataSet1;
+            // 
+            // отзывыTableAdapter1
+            // 
+            this.отзывыTableAdapter1.ClearBeforeFill = true;
+            // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -156,6 +175,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.отзывыBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.отзывыBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -180,5 +201,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
+        private ARMDataSet1 aRMDataSet1;
+        private System.Windows.Forms.BindingSource отзывыBindingSource1;
+        private ARMDataSet1TableAdapters.ОтзывыTableAdapter отзывыTableAdapter1;
     }
 }

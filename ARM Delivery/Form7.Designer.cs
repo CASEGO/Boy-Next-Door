@@ -39,9 +39,14 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.выручкаTableAdapter = new ARM_Delivery.ARMDataSetTableAdapters.ВыручкаTableAdapter();
+            this.aRMDataSet1 = new ARM_Delivery.ARMDataSet1();
+            this.выручкаBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.выручкаTableAdapter1 = new ARM_Delivery.ARMDataSet1TableAdapters.ВыручкаTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.выручкаBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.выручкаBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -55,7 +60,7 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
-            this.dataGridView1.DataSource = this.выручкаBindingSource;
+            this.dataGridView1.DataSource = this.выручкаBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(13, 13);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -124,6 +129,20 @@
             // 
             this.выручкаTableAdapter.ClearBeforeFill = true;
             // 
+            // aRMDataSet1
+            // 
+            this.aRMDataSet1.DataSetName = "ARMDataSet1";
+            this.aRMDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // выручкаBindingSource1
+            // 
+            this.выручкаBindingSource1.DataMember = "Выручка";
+            this.выручкаBindingSource1.DataSource = this.aRMDataSet1;
+            // 
+            // выручкаTableAdapter1
+            // 
+            this.выручкаTableAdapter1.ClearBeforeFill = true;
+            // 
             // Form7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -138,6 +157,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.выручкаBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.выручкаBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -162,5 +183,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private ARMDataSet1 aRMDataSet1;
+        private System.Windows.Forms.BindingSource выручкаBindingSource1;
+        private ARMDataSet1TableAdapters.ВыручкаTableAdapter выручкаTableAdapter1;
     }
 }

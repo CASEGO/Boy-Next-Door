@@ -19,6 +19,8 @@ namespace ARM_Delivery
 
         private void Form7_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "aRMDataSet1.Выручка". При необходимости она может быть перемещена или удалена.
+            this.выручкаTableAdapter1.Fill(this.aRMDataSet1.Выручка);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "aRMDataSet.Выручка". При необходимости она может быть перемещена или удалена.
             this.выручкаTableAdapter.Fill(this.aRMDataSet.Выручка);
 

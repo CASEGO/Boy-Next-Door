@@ -28,6 +28,8 @@ namespace ARM_Delivery
 
         private void Form5_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "aRMDataSet1.Заказы". При необходимости она может быть перемещена или удалена.
+            this.заказыTableAdapter.Fill(this.aRMDataSet1.Заказы);
 
 
 

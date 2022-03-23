@@ -19,6 +19,8 @@ namespace ARM_Delivery
 
         private void Form6_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "aRMDataSet1.Отзывы". При необходимости она может быть перемещена или удалена.
+            this.отзывыTableAdapter1.Fill(this.aRMDataSet1.Отзывы);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "aRMDataSet.Отзывы". При необходимости она может быть перемещена или удалена.
             this.отзывыTableAdapter.Fill(this.aRMDataSet.Отзывы);
 

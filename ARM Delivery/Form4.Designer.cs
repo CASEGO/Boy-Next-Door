@@ -40,17 +40,22 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.клиентыBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.клиентыBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.aRMDataSet = new ARM_Delivery.ARMDataSet();
+            this.клиентыBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.клиентыBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.клиентыTableAdapter = new ARM_Delivery.ARMDataSetTableAdapters.КлиентыTableAdapter();
             this.button4 = new System.Windows.Forms.Button();
-            this.клиентыBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.aRMDataSet1 = new ARM_Delivery.ARMDataSet1();
+            this.клиентыBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.клиентыTableAdapter1 = new ARM_Delivery.ARMDataSet1TableAdapters.КлиентыTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.клиентыBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.клиентыBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.клиентыBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.клиентыBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.клиентыBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.клиентыBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -103,7 +108,7 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewCheckBoxColumn1});
-            this.dataGridView1.DataSource = this.клиентыBindingSource2;
+            this.dataGridView1.DataSource = this.клиентыBindingSource3;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -153,15 +158,20 @@
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
             this.dataGridViewCheckBoxColumn1.ReadOnly = true;
             // 
-            // клиентыBindingSource1
+            // клиентыBindingSource2
             // 
-            this.клиентыBindingSource1.DataMember = "Клиенты";
-            this.клиентыBindingSource1.DataSource = this.aRMDataSet;
+            this.клиентыBindingSource2.DataMember = "Клиенты";
+            this.клиентыBindingSource2.DataSource = this.aRMDataSet;
             // 
             // aRMDataSet
             // 
             this.aRMDataSet.DataSetName = "ARMDataSet";
             this.aRMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // клиентыBindingSource1
+            // 
+            this.клиентыBindingSource1.DataMember = "Клиенты";
+            this.клиентыBindingSource1.DataSource = this.aRMDataSet;
             // 
             // клиентыBindingSource
             // 
@@ -182,10 +192,19 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // клиентыBindingSource2
+            // aRMDataSet1
             // 
-            this.клиентыBindingSource2.DataMember = "Клиенты";
-            this.клиентыBindingSource2.DataSource = this.aRMDataSet;
+            this.aRMDataSet1.DataSetName = "ARMDataSet1";
+            this.aRMDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // клиентыBindingSource3
+            // 
+            this.клиентыBindingSource3.DataMember = "Клиенты";
+            this.клиентыBindingSource3.DataSource = this.aRMDataSet1;
+            // 
+            // клиентыTableAdapter1
+            // 
+            this.клиентыTableAdapter1.ClearBeforeFill = true;
             // 
             // Form4
             // 
@@ -204,10 +223,12 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form4_FormClosed);
             this.Load += new System.EventHandler(this.Form4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.клиентыBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.клиентыBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.клиентыBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.клиентыBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.клиентыBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.клиентыBindingSource3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,5 +258,8 @@
         private System.Windows.Forms.BindingSource клиентыBindingSource1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.BindingSource клиентыBindingSource2;
+        private ARMDataSet1 aRMDataSet1;
+        private System.Windows.Forms.BindingSource клиентыBindingSource3;
+        private ARMDataSet1TableAdapters.КлиентыTableAdapter клиентыTableAdapter1;
     }
 }
