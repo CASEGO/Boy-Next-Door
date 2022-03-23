@@ -45,10 +45,12 @@
             this.клиентыBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.клиентыTableAdapter = new ARM_Delivery.ARMDataSetTableAdapters.КлиентыTableAdapter();
             this.button4 = new System.Windows.Forms.Button();
+            this.клиентыBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.клиентыBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.клиентыBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.клиентыBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -101,7 +103,7 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewCheckBoxColumn1});
-            this.dataGridView1.DataSource = this.клиентыBindingSource1;
+            this.dataGridView1.DataSource = this.клиентыBindingSource2;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -180,6 +182,11 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // клиентыBindingSource2
+            // 
+            this.клиентыBindingSource2.DataMember = "Клиенты";
+            this.клиентыBindingSource2.DataSource = this.aRMDataSet;
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,6 +207,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.клиентыBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.клиентыBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.клиентыBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,5 +236,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.BindingSource клиентыBindingSource1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.BindingSource клиентыBindingSource2;
     }
 }

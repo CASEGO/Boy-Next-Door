@@ -77,6 +77,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ARMDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ARMDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ARMDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataBase.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -166,6 +171,17 @@
     <None Include="ARMDataSet.xss">
       <DependentUpon>ARMDataSet.xsd</DependentUpon>
     </None>
+    <None Include="ARMDataSet1.xsc">
+      <DependentUpon>ARMDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ARMDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ARMDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ARMDataSet1.xss">
+      <DependentUpon>ARMDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -181,7 +197,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ARM.mdb">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

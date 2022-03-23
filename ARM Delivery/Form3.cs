@@ -14,7 +14,7 @@ namespace ARM_Delivery
     
     public partial class Form3 : Form
     {
-        public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= ARM.mdb";
+        public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= C:\\Users\\Sense\\Desktop\\Шарага\\ОАиП\\курсач\\ARM.mdb";
         private OleDbConnection myConnection;
         public Form3()
         {
@@ -23,8 +23,10 @@ namespace ARM_Delivery
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "aRMDataSet.Сотрудники". При необходимости она может быть перемещена или удалена.
-            this.сотрудникиTableAdapter.Fill(this.aRMDataSet.Сотрудники);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "aRMDataSet1.Сотрудники". При необходимости она может быть перемещена или удалена.
+            this.сотрудникиTableAdapter1.Fill(this.aRMDataSet1.Сотрудники);
+
+
 
 
 
@@ -58,7 +60,7 @@ namespace ARM_Delivery
             OleDbCommand command = new OleDbCommand(query, myConnection);
             command.ExecuteNonQuery();
             MessageBox.Show("Данные обновлены!");
-            this.сотрудникиTableAdapter.Fill(this.aRMDataSet.Сотрудники);
+            this.сотрудникиTableAdapter1.Fill(this.aRMDataSet1.Сотрудники);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -79,7 +81,9 @@ namespace ARM_Delivery
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.сотрудникиTableAdapter.Fill(this.aRMDataSet.Сотрудники);
+
+            this.сотрудникиTableAdapter1.Fill(this.aRMDataSet1.Сотрудники);
+
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -89,7 +93,7 @@ namespace ARM_Delivery
             OleDbCommand command = new OleDbCommand(query, myConnection);
             command.ExecuteNonQuery();
             MessageBox.Show("Данные обновлены!");
-            this.сотрудникиTableAdapter.Fill(this.aRMDataSet.Сотрудники);
+            this.сотрудникиTableAdapter1.Fill(this.aRMDataSet1.Сотрудники);
         }
 
         private void textBox9_TextChanged(object sender, EventArgs e)
@@ -99,7 +103,7 @@ namespace ARM_Delivery
 
         private void Form3_Activated(object sender, EventArgs e)
         {
-            this.сотрудникиTableAdapter.Fill(this.aRMDataSet.Сотрудники);
+            this.сотрудникиTableAdapter1.Fill(this.aRMDataSet1.Сотрудники);
         }
     }
 }

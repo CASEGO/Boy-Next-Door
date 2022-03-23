@@ -31,18 +31,19 @@ namespace ARM_Delivery
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string Name, Time, ZP, Phone, Status, Stavka;
+            
             int kod = Convert.ToInt32(textBox8.Text);
-            Name = textBox1.Text;
-            Time = textBox5.Text;
-            ZP = textBox6.Text;
-            Phone = textBox7.Text;
-            Status = textBox3.Text;
-            Stavka = textBox2.Text;
-            string query = "INSERT INTO Сотрудники VALUES (" + kod + ", '" + Name + "', " + Time + "," + ZP + "," + Phone + "," + Status + "," + Stavka + ") ";
+            string Name = textBox1.Text;
+            string Time = textBox5.Text;
+            string ZP = textBox6.Text;
+            string Phone = textBox7.Text;
+            string Status = textBox3.Text;
+            string Stavka = textBox2.Text;
+            string query = "INSERT INTO Сотрудники ([Код сотрудника], [ФИО сотрудника], [Кол-во часов отработанных], [Заработная плата], [Номер телефона], [Должность], [Ставка в час]) VALUES (" + kod + ",'" + Name + "','" + Time + "', '" + ZP + "','" + Phone + "','" + Status + "', '" + Stavka + "')";
             OleDbCommand command = new OleDbCommand(query, myConnection);
             command.ExecuteNonQuery();
-            MessageBox.Show("Данные обновлены!"); //string query = "INSERT INTO Сотрудники VALUES (" + kod + ", '" + Name + "', " + Time + ", " + ZP + ", " + Phone + "," + Status + "," + Stavka + ")";
+            MessageBox.Show("Данные обновлены!"); //string query = "INSERT INTO Сотрудники VALUES (" + kod + ", '" + Name + "', " + Time + ", " + ZP + ", " + Phone + "," + Status + "," + Stavka + (" + kod + ", '" + Name + "', " + Time + "," + ZP + "," + Phone + "," + Status + "," + Stavka + ")
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
