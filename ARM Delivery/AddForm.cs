@@ -12,7 +12,7 @@ namespace ARM_Delivery
 {
     public partial class AddForm : Form
     {
-        DataBase db = new DataBase();
+        
 
         public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= ARM.mdb";
         private OleDbConnection myConnection;

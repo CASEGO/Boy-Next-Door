@@ -157,7 +157,7 @@
             // 
             this.button1.Location = new System.Drawing.Point(1000, 46);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(210, 23);
+            this.button1.Size = new System.Drawing.Size(102, 23);
             this.button1.TabIndex = 1;
             this.button1.Text = "Найти заказ";
             this.button1.UseVisualStyleBackColor = true;
@@ -208,6 +208,7 @@
             this.button4.TabIndex = 7;
             this.button4.Text = "Добавить заказ";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -230,9 +231,9 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(1000, 136);
+            this.button6.Location = new System.Drawing.Point(1110, 46);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(210, 23);
+            this.button6.Size = new System.Drawing.Size(100, 23);
             this.button6.TabIndex = 9;
             this.button6.Text = "К списку";
             this.button6.UseVisualStyleBackColor = true;
@@ -254,6 +255,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form5";
             this.Text = "Заказы";
+            this.Activated += new System.EventHandler(this.Form5_Activated_1);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form5_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form5_FormClosed);
             this.Load += new System.EventHandler(this.Form5_Load);
