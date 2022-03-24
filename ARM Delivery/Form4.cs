@@ -58,7 +58,7 @@ namespace ARM_Delivery
         private void button1_Click(object sender, EventArgs e)
         {
 
-            
+            string Name = textBox1.Text;
             string query = "SELECT [Код клиента], ФИО, Заказы, Телефон, Адрес FROM Клиенты WHERE  ФИО LIKE '%" + Name + "%' ";
             OleDbDataAdapter command = new OleDbDataAdapter(query, myConnection);
             DataTable dt = new DataTable();
