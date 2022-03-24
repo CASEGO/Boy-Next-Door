@@ -43,8 +43,9 @@ namespace ARM_Delivery
 
             }
             else
+            {
                 MessageBox.Show("Неверный логин или пароль");
-            
+            }
 ;
         }
 
