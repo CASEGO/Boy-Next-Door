@@ -131,11 +131,23 @@
     <Compile Include="Form8.Designer.cs">
       <DependentUpon>Form8.cs</DependentUpon>
     </Compile>
+    <Compile Include="oper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oper.Designer.cs">
+      <DependentUpon>oper.cs</DependentUpon>
+    </Compile>
     <Compile Include="Otchet.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Otchet.Designer.cs">
       <DependentUpon>Otchet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pass.Designer.cs">
+      <DependentUpon>pass.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -166,8 +178,14 @@
     <EmbeddedResource Include="Form8.resx">
       <DependentUpon>Form8.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="oper.resx">
+      <DependentUpon>oper.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Otchet.resx">
       <DependentUpon>Otchet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pass.resx">
+      <DependentUpon>pass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

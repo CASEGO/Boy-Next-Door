@@ -50,7 +50,7 @@ namespace ARM_Delivery
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form2 newForm = new Form2(this);
+            pass newForm = new pass(this);
             newForm.Show();
         }
 

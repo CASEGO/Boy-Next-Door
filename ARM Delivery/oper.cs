@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace ARM_Delivery
 {
-    public partial class Form2 : Form
-    
+    public partial class oper : Form
     {
-        public Form2()
+        public oper()
         {
             InitializeComponent();
-        }
-        public Form2(pass f)
-        {
-            InitializeComponent();
-            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -28,27 +22,16 @@ namespace ARM_Delivery
             this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
-            Form3 newForm = new Form3(this);
+            Form6 newForm = new Form6();
             newForm.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form7 newForm = new Form7(this);
+            Form7 newForm = new Form7();
             newForm.Show();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Form6 newForm = new Form6(this);
-            newForm.Show();
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
