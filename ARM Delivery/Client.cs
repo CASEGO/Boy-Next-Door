@@ -30,6 +30,7 @@ namespace ARM_Delivery
 
 
 
+
         }
         public Client(Home f)
         {
@@ -65,6 +66,7 @@ namespace ARM_Delivery
             command.Fill(dt);
             dataGridView1.DataSource = dt;
             myConnection.Close();
+            textBox1.Clear();
             //"SELECT ФИО, Заказы FROM Клиенты WHERE ФИО LIKE '%" + Name + "%' " ; "SELECT  FROM Клиенты WHERE ФИО LIKE ='" + Name + "'";
 
 
@@ -79,7 +81,9 @@ namespace ARM_Delivery
         {
             myConnection = new OleDbConnection(connectString);
             myConnection.Open();
-            dataGridView1.DataSource = клиентыTableAdapter;
+            //dataGridView1.DataSource = клиентыTableAdapter;
+            dataGridView1.DataSource = клиентыBindingSource;
+
         }
 
         private void Form4_FormClosed(object sender, FormClosedEventArgs e)
@@ -94,7 +98,8 @@ namespace ARM_Delivery
             OleDbCommand command = new OleDbCommand(query, myConnection);
             command.ExecuteNonQuery();
             MessageBox.Show("Данные обновлены!");
-            dataGridView1.DataSource = клиентыBindingSource;
+            this.клиентыTableAdapter.Fill(this.aRMDataSet1.Клиенты);
+            textBox1.Clear();
         }
     }
 }

@@ -62,6 +62,7 @@ namespace ARM_Delivery
             command.ExecuteNonQuery();
             MessageBox.Show("Данные обновлены!");
             this.сотрудникиTableAdapter.Fill(this.aRMDataSet1.Сотрудники);
+            textBox9.Clear();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -94,6 +95,8 @@ namespace ARM_Delivery
             command.ExecuteNonQuery();
             MessageBox.Show("Данные обновлены!");
             this.сотрудникиTableAdapter.Fill(this.aRMDataSet1.Сотрудники);
+            textBox9.Clear();
+            textBox1.Clear();
         }
 
         private void textBox9_TextChanged(object sender, EventArgs e)
