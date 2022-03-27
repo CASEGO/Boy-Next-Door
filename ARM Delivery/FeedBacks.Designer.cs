@@ -31,20 +31,18 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FeedBacks));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.отзывыBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aRMDataSet1 = new ARM_Delivery.ARMDataSet1();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.aRMDataSet1 = new ARM_Delivery.ARMDataSet1();
-            this.отзывыBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.отзывыTableAdapter = new ARM_Delivery.ARMDataSet1TableAdapters.ОтзывыTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.отзывыBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -55,14 +53,22 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewCheckBoxColumn1,
-            this.dataGridViewCheckBoxColumn2});
+            this.dataGridViewTextBoxColumn4});
             this.dataGridView1.DataSource = this.отзывыBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(659, 271);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // отзывыBindingSource
+            // 
+            this.отзывыBindingSource.DataMember = "Отзывы";
+            this.отзывыBindingSource.DataSource = this.aRMDataSet1;
+            // 
+            // aRMDataSet1
+            // 
+            this.aRMDataSet1.DataSetName = "ARMDataSet1";
+            this.aRMDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button3
             // 
@@ -83,16 +89,6 @@
             this.button4.Text = "Помощь";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // aRMDataSet1
-            // 
-            this.aRMDataSet1.DataSetName = "ARMDataSet1";
-            this.aRMDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // отзывыBindingSource
-            // 
-            this.отзывыBindingSource.DataMember = "Отзывы";
-            this.отзывыBindingSource.DataSource = this.aRMDataSet1;
             // 
             // отзывыTableAdapter
             // 
@@ -122,19 +118,7 @@
             this.dataGridViewTextBoxColumn4.HeaderText = "Дата";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            this.dataGridViewCheckBoxColumn1.DataPropertyName = "Статус отзыва";
-            this.dataGridViewCheckBoxColumn1.HeaderText = "Статус отзыва";
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            // 
-            // dataGridViewCheckBoxColumn2
-            // 
-            this.dataGridViewCheckBoxColumn2.DataPropertyName = "Статус проверки";
-            this.dataGridViewCheckBoxColumn2.HeaderText = "Статус проверки";
-            this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
-            // 
-            // Form6
+            // FeedBacks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -143,13 +127,13 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form6";
+            this.Name = "FeedBacks";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Отзывы";
             this.Load += new System.EventHandler(this.Form6_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.отзывыBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -172,7 +156,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
     }
 }
