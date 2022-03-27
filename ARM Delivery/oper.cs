@@ -24,13 +24,13 @@ namespace ARM_Delivery
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Form6 newForm = new Form6();
+            FeedBacks newForm = new FeedBacks();
             newForm.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form7 newForm = new Form7();
+            statistics newForm = new statistics();
             newForm.Show();
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace ARM_Delivery
 {
-    partial class Form7
+    partial class statistics
     {
         /// <summary>
         /// Required designer variable.
@@ -29,26 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form7));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(statistics));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.aRMDataSet1 = new ARM_Delivery.ARMDataSet1();
+            this.выручкаBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.выручкаTableAdapter = new ARM_Delivery.ARMDataSet1TableAdapters.ВыручкаTableAdapter();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.выручкаBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.aRMDataSet1 = new ARM_Delivery.ARMDataSet1();
-            this.выручкаBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aRMDataSet = new ARM_Delivery.ARMDataSet();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.выручкаTableAdapter = new ARM_Delivery.ARMDataSetTableAdapters.ВыручкаTableAdapter();
-            this.выручкаTableAdapter1 = new ARM_Delivery.ARMDataSet1TableAdapters.ВыручкаTableAdapter();
-            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.выручкаBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.выручкаBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -62,12 +57,56 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
-            this.dataGridView1.DataSource = this.выручкаBindingSource1;
+            this.dataGridView1.DataSource = this.выручкаBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(13, 13);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(588, 351);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(358, 383);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(149, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Выход в меню";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(48, 383);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(149, 23);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Добавить отчет";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(203, 383);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(149, 23);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Помощь";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // aRMDataSet1
+            // 
+            this.aRMDataSet1.DataSetName = "ARMDataSet1";
+            this.aRMDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // выручкаBindingSource
+            // 
+            this.выручкаBindingSource.DataMember = "Выручка";
+            this.выручкаBindingSource.DataSource = this.aRMDataSet1;
+            // 
+            // выручкаTableAdapter
+            // 
+            this.выручкаTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -97,64 +136,6 @@
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
             // 
-            // выручкаBindingSource1
-            // 
-            this.выручкаBindingSource1.DataMember = "Выручка";
-            this.выручкаBindingSource1.DataSource = this.aRMDataSet1;
-            // 
-            // aRMDataSet1
-            // 
-            this.aRMDataSet1.DataSetName = "ARMDataSet1";
-            this.aRMDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // выручкаBindingSource
-            // 
-            this.выручкаBindingSource.DataMember = "Выручка";
-            this.выручкаBindingSource.DataSource = this.aRMDataSet;
-            // 
-            // aRMDataSet
-            // 
-            this.aRMDataSet.DataSetName = "ARMDataSet";
-            this.aRMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(358, 383);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Выход в меню";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(48, 383);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(149, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Добавить отчет";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // выручкаTableAdapter
-            // 
-            this.выручкаTableAdapter.ClearBeforeFill = true;
-            // 
-            // выручкаTableAdapter1
-            // 
-            this.выручкаTableAdapter1.ClearBeforeFill = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(203, 383);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(149, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Помощь";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // Form7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -171,10 +152,8 @@
             this.Activated += new System.EventHandler(this.Form7_Activated);
             this.Load += new System.EventHandler(this.Form7_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.выручкаBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.выручкаBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -192,16 +171,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.Button button2;
-        private ARMDataSet aRMDataSet;
+        private System.Windows.Forms.Button button3;
+        private ARMDataSet1 aRMDataSet1;
         private System.Windows.Forms.BindingSource выручкаBindingSource;
-        private ARMDataSetTableAdapters.ВыручкаTableAdapter выручкаTableAdapter;
+        private ARMDataSet1TableAdapters.ВыручкаTableAdapter выручкаTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private ARMDataSet1 aRMDataSet1;
-        private System.Windows.Forms.BindingSource выручкаBindingSource1;
-        private ARMDataSet1TableAdapters.ВыручкаTableAdapter выручкаTableAdapter1;
-        private System.Windows.Forms.Button button3;
     }
 }

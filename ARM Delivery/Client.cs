@@ -13,11 +13,11 @@ using System.Data.OleDb;
 namespace ARM_Delivery
 {
 
-    public partial class Form4 : Form
+    public partial class Client : Form
     {
         public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= ARM.mdb";
         private OleDbConnection myConnection;
-        public Form4()
+        public Client()
         {
             InitializeComponent();
         }
@@ -25,13 +25,14 @@ namespace ARM_Delivery
         private void Form4_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "aRMDataSet1.Клиенты". При необходимости она может быть перемещена или удалена.
-            this.клиентыTableAdapter1.Fill(this.aRMDataSet1.Клиенты);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "aRMDataSet.Клиенты". При необходимости она может быть перемещена или удалена.
-            this.клиентыTableAdapter.Fill(this.aRMDataSet.Клиенты);
+            this.клиентыTableAdapter.Fill(this.aRMDataSet1.Клиенты);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "aRMDataSet1.Клиенты". При необходимости она может быть перемещена или удалена.
+            //this.клиентыTableAdapter.Fill(this.aRMDataSet1.Клиенты);
+
 
 
         }
-        public Form4(Form1 f)
+        public Client(Home f)
         {
             InitializeComponent();
             myConnection = new OleDbConnection(connectString);
@@ -79,8 +80,7 @@ namespace ARM_Delivery
         {
             myConnection = new OleDbConnection(connectString);
             myConnection.Open();
-            dataGridView1.DataSource = клиентыBindingSource;
-            this.клиентыTableAdapter.Fill(this.aRMDataSet.Клиенты);
+            dataGridView1.DataSource = клиентыTableAdapter;
         }
 
         private void Form4_FormClosed(object sender, FormClosedEventArgs e)
@@ -96,7 +96,6 @@ namespace ARM_Delivery
             command.ExecuteNonQuery();
             MessageBox.Show("Данные обновлены!");
             dataGridView1.DataSource = клиентыBindingSource;
-            this.клиентыTableAdapter.Fill(this.aRMDataSet.Клиенты);
         }
     }
 }

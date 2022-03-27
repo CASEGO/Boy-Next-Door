@@ -118,5 +118,14 @@ namespace ARM_Delivery.Properties {
                 return ((string)(this["ARMConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        public string Параметр {
+            get {
+                return ((string)(this["Параметр"]));
+            }
+        }
     }
 }

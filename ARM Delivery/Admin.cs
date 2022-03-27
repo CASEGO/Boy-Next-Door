@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace ARM_Delivery
 {
-    public partial class Form2 : Form
+    public partial class Admin : Form
     
     {
-        public Form2()
+        public Admin()
         {
             InitializeComponent();
         }
-        public Form2(pass f)
+        public Admin(pass f)
         {
             InitializeComponent();
             
@@ -30,19 +30,19 @@ namespace ARM_Delivery
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form3 newForm = new Form3(this);
+            courierdata newForm = new courierdata(this);
             newForm.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form7 newForm = new Form7(this);
+            statistics newForm = new statistics(this);
             newForm.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Form6 newForm = new Form6(this);
+            FeedBacks newForm = new FeedBacks(this);
             newForm.Show();
         }
 

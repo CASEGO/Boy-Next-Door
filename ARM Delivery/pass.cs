@@ -16,7 +16,7 @@ namespace ARM_Delivery
         {
             InitializeComponent();
         }
-        public pass(Form1 f)
+        public pass(Home f)
         {
             InitializeComponent();
 
@@ -30,7 +30,7 @@ namespace ARM_Delivery
         {
             if (textBox1.Text == "admin" && textBox2.Text == "passadm")
             {
-                Form2 af = new Form2();
+                Admin af = new Admin();
                 af.Show();
                 this.Close();
 

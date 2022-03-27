@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ARM_Delivery
 {
-    public partial class Form6 : Form
+    public partial class FeedBacks : Form
     {
-        public Form6()
+        public FeedBacks()
         {
             InitializeComponent();
         }
@@ -20,13 +20,11 @@ namespace ARM_Delivery
         private void Form6_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "aRMDataSet1.Отзывы". При необходимости она может быть перемещена или удалена.
-            this.отзывыTableAdapter1.Fill(this.aRMDataSet1.Отзывы);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "aRMDataSet.Отзывы". При необходимости она может быть перемещена или удалена.
-            this.отзывыTableAdapter.Fill(this.aRMDataSet.Отзывы);
+            this.отзывыTableAdapter.Fill(this.aRMDataSet1.Отзывы);
 
 
         }
-        public Form6(Form2 f)
+        public FeedBacks(Admin f)
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace ARM_Delivery
 {
-    partial class Form6
+    partial class FeedBacks
     {
         /// <summary>
         /// Required designer variable.
@@ -29,27 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form6));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FeedBacks));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.aRMDataSet1 = new ARM_Delivery.ARMDataSet1();
+            this.отзывыBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.отзывыTableAdapter = new ARM_Delivery.ARMDataSet1TableAdapters.ОтзывыTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.отзывыBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.aRMDataSet1 = new ARM_Delivery.ARMDataSet1();
-            this.отзывыBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aRMDataSet = new ARM_Delivery.ARMDataSet();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.отзывыTableAdapter = new ARM_Delivery.ARMDataSetTableAdapters.ОтзывыTableAdapter();
-            this.отзывыTableAdapter1 = new ARM_Delivery.ARMDataSet1TableAdapters.ОтзывыTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.отзывыBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.отзывыBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -63,11 +58,45 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewCheckBoxColumn1,
             this.dataGridViewCheckBoxColumn2});
-            this.dataGridView1.DataSource = this.отзывыBindingSource1;
+            this.dataGridView1.DataSource = this.отзывыBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(659, 271);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(441, 299);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(153, 23);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Выход в меню";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(95, 299);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(153, 23);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "Помощь";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // aRMDataSet1
+            // 
+            this.aRMDataSet1.DataSetName = "ARMDataSet1";
+            this.aRMDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // отзывыBindingSource
+            // 
+            this.отзывыBindingSource.DataMember = "Отзывы";
+            this.отзывыBindingSource.DataSource = this.aRMDataSet1;
+            // 
+            // отзывыTableAdapter
+            // 
+            this.отзывыTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -105,54 +134,6 @@
             this.dataGridViewCheckBoxColumn2.HeaderText = "Статус проверки";
             this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
             // 
-            // отзывыBindingSource1
-            // 
-            this.отзывыBindingSource1.DataMember = "Отзывы";
-            this.отзывыBindingSource1.DataSource = this.aRMDataSet1;
-            // 
-            // aRMDataSet1
-            // 
-            this.aRMDataSet1.DataSetName = "ARMDataSet1";
-            this.aRMDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // отзывыBindingSource
-            // 
-            this.отзывыBindingSource.DataMember = "Отзывы";
-            this.отзывыBindingSource.DataSource = this.aRMDataSet;
-            // 
-            // aRMDataSet
-            // 
-            this.aRMDataSet.DataSetName = "ARMDataSet";
-            this.aRMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(441, 299);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(153, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Выход в меню";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(95, 299);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(153, 23);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Помощь";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // отзывыTableAdapter
-            // 
-            this.отзывыTableAdapter.ClearBeforeFill = true;
-            // 
-            // отзывыTableAdapter1
-            // 
-            this.отзывыTableAdapter1.ClearBeforeFill = true;
-            // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,10 +148,8 @@
             this.Text = "Отзывы";
             this.Load += new System.EventHandler(this.Form6_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.отзывыBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.отзывыBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -186,17 +165,14 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn статусОтзываDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn статусПроверкиDataGridViewCheckBoxColumn;
         private System.Windows.Forms.Button button4;
-        private ARMDataSet aRMDataSet;
+        private ARMDataSet1 aRMDataSet1;
         private System.Windows.Forms.BindingSource отзывыBindingSource;
-        private ARMDataSetTableAdapters.ОтзывыTableAdapter отзывыTableAdapter;
+        private ARMDataSet1TableAdapters.ОтзывыTableAdapter отзывыTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
-        private ARMDataSet1 aRMDataSet1;
-        private System.Windows.Forms.BindingSource отзывыBindingSource1;
-        private ARMDataSet1TableAdapters.ОтзывыTableAdapter отзывыTableAdapter1;
     }
 }

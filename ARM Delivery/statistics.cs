@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ARM_Delivery
 {
-    public partial class Form7 : Form
+    public partial class statistics : Form
     {
-        public Form7()
+        public statistics()
         {
             InitializeComponent();
         }
@@ -20,13 +20,13 @@ namespace ARM_Delivery
         private void Form7_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "aRMDataSet1.Выручка". При необходимости она может быть перемещена или удалена.
-            this.выручкаTableAdapter1.Fill(this.aRMDataSet1.Выручка);
+            this.выручкаTableAdapter.Fill(this.aRMDataSet1.Выручка);
 
 
 
 
         }
-        public Form7(Form2 f)
+        public statistics(Admin f)
         {
             InitializeComponent();
 
@@ -52,7 +52,7 @@ namespace ARM_Delivery
 
         private void Form7_Activated(object sender, EventArgs e)
         {
-            this.выручкаTableAdapter1.Fill(this.aRMDataSet1.Выручка);
+            this.выручкаTableAdapter.Fill(this.aRMDataSet1.Выручка);
         }
     }
 }

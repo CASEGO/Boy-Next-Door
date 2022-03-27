@@ -1,6 +1,6 @@
 ﻿namespace ARM_Delivery
 {
-    partial class Form3
+    partial class courierdata
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(courierdata));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,31 +38,24 @@
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.сотрудникиBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.aRMDataSet1 = new ARM_Delivery.ARMDataSet1();
-            this.сотрудникиBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.aRMDataSet = new ARM_Delivery.ARMDataSet();
             this.сотрудникиBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aRMDataSet1 = new ARM_Delivery.ARMDataSet1();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.сотрудникиTableAdapter = new ARM_Delivery.ARMDataSetTableAdapters.СотрудникиTableAdapter();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
-            this.сотрудникиBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.сотрудникиTableAdapter1 = new ARM_Delivery.ARMDataSet1TableAdapters.СотрудникиTableAdapter();
+            this.сотрудникиTableAdapter = new ARM_Delivery.ARMDataSet1TableAdapters.СотрудникиTableAdapter();
+            this.сотрудникиBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.сотрудникиBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сотрудникиBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.сотрудникиBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.сотрудникиBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.сотрудникиBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -79,7 +72,7 @@
             this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn13,
             this.dataGridViewTextBoxColumn14});
-            this.dataGridView1.DataSource = this.сотрудникиBindingSource3;
+            this.dataGridView1.DataSource = this.сотрудникиBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -136,30 +129,13 @@
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             this.dataGridViewTextBoxColumn14.ReadOnly = true;
             // 
-            // сотрудникиBindingSource3
-            // 
-            this.сотрудникиBindingSource3.DataMember = "Сотрудники";
-            this.сотрудникиBindingSource3.DataSource = this.aRMDataSet1;
-            // 
-            // aRMDataSet1
-            // 
-            this.aRMDataSet1.DataSetName = "ARMDataSet1";
-            this.aRMDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // сотрудникиBindingSource1
-            // 
-            this.сотрудникиBindingSource1.DataMember = "Сотрудники";
-            this.сотрудникиBindingSource1.DataSource = this.aRMDataSet;
-            // 
-            // aRMDataSet
-            // 
-            this.aRMDataSet.DataSetName = "ARMDataSet";
-            this.aRMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // сотрудникиBindingSource
             // 
             this.сотрудникиBindingSource.DataMember = "Сотрудники";
-            this.сотрудникиBindingSource.DataSource = this.aRMDataSet;
+            this.сотрудникиBindingSource.DataSource = this.aRMDataSet1;
+            // 
+            this.aRMDataSet1.DataSetName = "ARMDataSet1";
+            this.aRMDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button1
             // 
@@ -200,10 +176,6 @@
             this.button4.Text = "Помощь";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // сотрудникиTableAdapter
-            // 
-            this.сотрудникиTableAdapter.ClearBeforeFill = true;
             // 
             // textBox9
             // 
@@ -258,14 +230,14 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // сотрудникиBindingSource2
+            // сотрудникиTableAdapter
             // 
-            this.сотрудникиBindingSource2.DataMember = "Сотрудники";
-            this.сотрудникиBindingSource2.DataSource = this.aRMDataSet;
+            this.сотрудникиTableAdapter.ClearBeforeFill = true;
             // 
-            // сотрудникиTableAdapter1
+            // сотрудникиBindingSource1
             // 
-            this.сотрудникиTableAdapter1.ClearBeforeFill = true;
+            this.сотрудникиBindingSource1.DataMember = "Сотрудники";
+            this.сотрудникиBindingSource1.DataSource = this.aRMDataSet1;
             // 
             // Form3
             // 
@@ -291,12 +263,9 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form3_FormClosed);
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.сотрудникиBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сотрудникиBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.сотрудникиBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.сотрудникиBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.сотрудникиBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -324,20 +293,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private ARMDataSet aRMDataSet;
-        private System.Windows.Forms.BindingSource сотрудникиBindingSource;
-        private ARMDataSetTableAdapters.СотрудникиTableAdapter сотрудникиTableAdapter;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.BindingSource сотрудникиBindingSource1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.BindingSource сотрудникиBindingSource2;
         private ARMDataSet1 aRMDataSet1;
-        private System.Windows.Forms.BindingSource сотрудникиBindingSource3;
-        private ARMDataSet1TableAdapters.СотрудникиTableAdapter сотрудникиTableAdapter1;
+        private System.Windows.Forms.BindingSource сотрудникиBindingSource;
+        private ARMDataSet1TableAdapters.СотрудникиTableAdapter сотрудникиTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
@@ -345,5 +309,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.BindingSource сотрудникиBindingSource1;
     }
 }

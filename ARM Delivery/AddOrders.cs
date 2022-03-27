@@ -12,11 +12,11 @@ using System.Data.OleDb;
 namespace ARM_Delivery
 {
 
-    public partial class Form8 : Form
+    public partial class AddOrders : Form
     {
         public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= ARM.mdb";
         private OleDbConnection myConnection;
-        public Form8()
+        public AddOrders()
         {
             InitializeComponent();
             myConnection = new OleDbConnection(connectString);
@@ -50,6 +50,8 @@ namespace ARM_Delivery
             string drink = textBox8.Text;
             string courier = textBox9.Text;
             string query = "INSERT INTO Заказы ([Код заказа],[Номер заказа],[ФИО],[Дата доставки заказа],[Адрес заказа],[Номер телефона],[Блюдо],[Напиток],[Доставщик]) VALUES(" + kod + ",'" + NZ + "','" + Name + "', '" + Time + "','" + Adres + "','" + Phone + "', '" + dish + "','" + drink + "','" + courier + "')";
+
+
             OleDbCommand command = new OleDbCommand(query, myConnection);
             command.ExecuteNonQuery();
             MessageBox.Show("Данные обновлены!");

@@ -11,16 +11,16 @@ using System.Data.OleDb;
 
 namespace ARM_Delivery
 {
-    public partial class Form5 : Form
+    public partial class orders : Form
         
     {
-        public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= ARM.mdb";
+        public static string connectString = "Provider = Microsoft.ACE.OLEDB.12.0; Data Source = ARM.mdb";
         private OleDbConnection myConnection;
-        public Form5()
+        public orders()
         {
             InitializeComponent();
         }
-        public Form5(Form1 f)
+        public orders(Home f)
         {
             InitializeComponent();
             myConnection = new OleDbConnection(connectString);
@@ -94,7 +94,7 @@ namespace ARM_Delivery
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form8 af = new Form8();
+            AddOrders af = new AddOrders();
             af.Owner = this;
             af.Show();
         }

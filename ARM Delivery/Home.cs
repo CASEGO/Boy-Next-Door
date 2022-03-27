@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace ARM_Delivery
 {
-    public partial class Form1 : Form
+    public partial class Home : Form
     {
-        public Form1()
+        public Home()
         {
             InitializeComponent();
         }
@@ -56,13 +56,13 @@ namespace ARM_Delivery
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form5 newForm = new Form5(this);
+            orders newForm = new orders(this);
             newForm.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form4 newForm = new Form4(this);
+            Client newForm = new Client(this);
             newForm.Show();
         }
     }
