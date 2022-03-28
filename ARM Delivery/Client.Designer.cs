@@ -39,14 +39,16 @@
             this.button5 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aRMDataSet1 = new ARM_Delivery.ARMDataSet1();
             this.клиентыBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.клиентыTableAdapter = new ARM_Delivery.ARMDataSet1TableAdapters.КлиентыTableAdapter();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.кодКлиентаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.заказыDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.фИОDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.телефонDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.адресDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.статусЗаказаDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aRMDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.клиентыBindingSource)).BeginInit();
@@ -96,11 +98,12 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5});
+            this.кодКлиентаDataGridViewTextBoxColumn,
+            this.заказыDataGridViewTextBoxColumn,
+            this.фИОDataGridViewTextBoxColumn,
+            this.телефонDataGridViewTextBoxColumn,
+            this.адресDataGridViewTextBoxColumn,
+            this.статусЗаказаDataGridViewCheckBoxColumn});
             this.dataGridView1.DataSource = this.клиентыBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
@@ -146,6 +149,12 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Введи Код";
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Код клиента";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Код клиента";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
             // aRMDataSet1
             // 
             this.aRMDataSet1.DataSetName = "ARMDataSet1";
@@ -160,35 +169,41 @@
             // 
             this.клиентыTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn1
+            // кодКлиентаDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Код клиента";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Код клиента";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.кодКлиентаDataGridViewTextBoxColumn.DataPropertyName = "Код клиента";
+            this.кодКлиентаDataGridViewTextBoxColumn.HeaderText = "Код клиента";
+            this.кодКлиентаDataGridViewTextBoxColumn.Name = "кодКлиентаDataGridViewTextBoxColumn";
             // 
-            // dataGridViewTextBoxColumn2
+            // заказыDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Заказы";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Заказы";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.заказыDataGridViewTextBoxColumn.DataPropertyName = "Заказы";
+            this.заказыDataGridViewTextBoxColumn.HeaderText = "Заказы";
+            this.заказыDataGridViewTextBoxColumn.Name = "заказыDataGridViewTextBoxColumn";
             // 
-            // dataGridViewTextBoxColumn3
+            // фИОDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "ФИО";
-            this.dataGridViewTextBoxColumn3.HeaderText = "ФИО";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.фИОDataGridViewTextBoxColumn.DataPropertyName = "ФИО";
+            this.фИОDataGridViewTextBoxColumn.HeaderText = "ФИО";
+            this.фИОDataGridViewTextBoxColumn.Name = "фИОDataGridViewTextBoxColumn";
             // 
-            // dataGridViewTextBoxColumn4
+            // телефонDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Телефон";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Телефон";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.телефонDataGridViewTextBoxColumn.DataPropertyName = "Телефон";
+            this.телефонDataGridViewTextBoxColumn.HeaderText = "Телефон";
+            this.телефонDataGridViewTextBoxColumn.Name = "телефонDataGridViewTextBoxColumn";
             // 
-            // dataGridViewTextBoxColumn5
+            // адресDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Адрес";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Адрес";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.адресDataGridViewTextBoxColumn.DataPropertyName = "Адрес";
+            this.адресDataGridViewTextBoxColumn.HeaderText = "Адрес";
+            this.адресDataGridViewTextBoxColumn.Name = "адресDataGridViewTextBoxColumn";
+            // 
+            // статусЗаказаDataGridViewCheckBoxColumn
+            // 
+            this.статусЗаказаDataGridViewCheckBoxColumn.DataPropertyName = "Статус заказа";
+            this.статусЗаказаDataGridViewCheckBoxColumn.HeaderText = "Статус заказа";
+            this.статусЗаказаDataGridViewCheckBoxColumn.Name = "статусЗаказаDataGridViewCheckBoxColumn";
             // 
             // Client
             // 
@@ -223,25 +238,21 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn кодКлиентаDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn заказыDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn фИОDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn телефонDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn адресDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn статусЗаказаDataGridViewCheckBoxColumn;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private ARMDataSet1 aRMDataSet1;
         private System.Windows.Forms.BindingSource клиентыBindingSource;
         private ARMDataSet1TableAdapters.КлиентыTableAdapter клиентыTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn кодКлиентаDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn заказыDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn фИОDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn телефонDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn адресDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn статусЗаказаDataGridViewCheckBoxColumn;
     }
 }

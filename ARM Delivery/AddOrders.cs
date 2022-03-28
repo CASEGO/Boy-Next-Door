@@ -53,12 +53,12 @@ namespace ARM_Delivery
             //string status = true;
             bool statusZ = true;
             string query = "INSERT INTO Заказы ([Код заказа],[Номер заказа],[ФИО],[Дата доставки заказа],[Адрес заказа],[Номер телефона],[Блюдо],[Напиток],[Доставщик]) VALUES(" + kod + ",'" + NZ + "','" + Name + "', '" + Time + "','" + Adres + "','" + Phone + "', '" + dish + "','" + drink + "','" + courier + "')";
-            //string client = "INSERT INTO Клиенты ([Код клиента],[Заказы],[ФИО],[Адрес],[Статус Заказа]) VALUES ("+ kod +",'"+ NZ +"', '"+ Name + "', '" + Phone + "','"+ Adres+"','"+ statusZ +"')";
+            string client = "INSERT INTO Клиенты ([Код клиента],[Заказы],[ФИО],[Адрес],[Статус Заказа]) VALUES ("+ kod +",'"+ NZ +"', '"+ Name + "', '" + Phone + "','"+ Adres+"','"+ statusZ +"')";
 
             OleDbCommand command = new OleDbCommand(query, myConnection);
             command.ExecuteNonQuery();
-            //OleDbCommand client1 = new OleDbCommand(client, myConnection);
-            //client1.ExecuteNonQuery();
+            OleDbCommand client1 = new OleDbCommand(client, myConnection);
+            client1.ExecuteNonQuery();
             MessageBox.Show("Данные обновлены!");
             this.Close();
         }
