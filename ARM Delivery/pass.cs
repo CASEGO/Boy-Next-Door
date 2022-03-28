@@ -35,7 +35,7 @@ namespace ARM_Delivery
                 this.Close();
 
             }
-            if (textBox1.Text == "operator" && textBox2.Text == "passoper")
+            else if (textBox1.Text == "operator" && textBox2.Text == "passoper")
             {
                 oper af = new oper();
                 af.Show();

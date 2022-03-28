@@ -103,7 +103,8 @@ namespace ARM_Delivery
         private void Form5_Activated_1(object sender, EventArgs e)
         {
             dataGridView1.DataSource = заказыBindingSource;
-            //this.заказыTableAdapter.Fill(this.aRMDataSet1.Заказы);
+            
+            this.заказыTableAdapter.Fill(this.aRMDataSet1.Заказы);
         }
     }
 }
