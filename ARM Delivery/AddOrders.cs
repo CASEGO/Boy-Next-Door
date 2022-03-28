@@ -42,7 +42,6 @@ namespace ARM_Delivery
         {
             int kod = Convert.ToInt32(textBox1.Text);
             int NZ = Convert.ToInt32(textBox2.Text);
-            //string NZ = textBox2.Text;
             string Name = textBox3.Text;
             string Time = textBox4.Text;
             string Adres = textBox5.Text;
@@ -50,11 +49,8 @@ namespace ARM_Delivery
             string dish = textBox7.Text;
             string drink = textBox8.Text;
             string courier = textBox9.Text;
-            //string status = true;
-           // bool statusZ = false;
             string query = "INSERT INTO Заказы ([Код заказа],[Номер заказа],[ФИО],[Дата доставки заказа],[Адрес заказа],[Номер телефона],[Блюдо],[Напиток],[Доставщик]) VALUES(" + kod + ",'" + NZ + "','" + Name + "', '" + Time + "','" + Adres + "','" + Phone + "', '" + dish + "','" + drink + "','" + courier + "')";
             string client = "INSERT INTO Клиенты ([Код клиента],[Заказы],[ФИО],[Телефон],[Адрес]) VALUES ("+ kod + ", " + NZ + ", '" + Name + "', '" + Phone + "','"+ Adres+"')";
-            // Синтакс на NZ
             OleDbCommand command = new OleDbCommand(query, myConnection);
             command.ExecuteNonQuery();
             OleDbCommand client1 = new OleDbCommand(client, myConnection);
