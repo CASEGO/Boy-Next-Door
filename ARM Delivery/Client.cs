@@ -49,7 +49,7 @@ namespace ARM_Delivery
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Для поиска в графу ввода впиши ФИО и нажми НАЙТИ КЛИЕНТА. Для удаления клиента в графу ввода впиши его код и нажми УДАЛИТЬ.", "Внимание!");
+            MessageBox.Show("Для поиска в графу ввода впиши ФИО и нажми НАЙТИ КЛИЕНТА. Для удаления клиента в графу ввода впиши его код и нажми УДАЛИТЬ. Для изменения статуса впиши код клиента и нажми ИЗМЕНИТЬ СТАТУС." , "Внимание!");
             return;
         }
 
@@ -95,13 +95,25 @@ namespace ARM_Delivery
 
         private void button5_Click(object sender, EventArgs e)
         {
-            int kod = Convert.ToInt32(textBox1.Text);
+            int kod = Convert.ToInt32(textBox2.Text);
             string query = "DELETE FROM Клиенты WHERE [Код клиента] = " + kod;
             OleDbCommand command = new OleDbCommand(query, myConnection);
             command.ExecuteNonQuery();
             MessageBox.Show("Данные обновлены!");
             this.клиентыTableAdapter.Fill(this.aRMDataSet1.Клиенты);
-            textBox1.Clear();
+            textBox2.Clear();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            int kod = Convert.ToInt32(textBox2.Text);
+            bool stat = true;
+            string status = "UPDATE [Клиенты] SET [Статус заказа] =" + stat + " WHERE [Код клиента] = " + kod;
+            OleDbCommand command = new OleDbCommand(status, myConnection);
+            command.ExecuteNonQuery();
+            MessageBox.Show("Данные обновлены!");
+            this.клиентыTableAdapter.Fill(this.aRMDataSet1.Клиенты);
+            textBox2.Clear();
         }
     }
 }

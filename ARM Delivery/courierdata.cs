@@ -89,13 +89,13 @@ namespace ARM_Delivery
 
         private void button6_Click(object sender, EventArgs e)
         {
-            int kod = Convert.ToInt32(textBox9.Text);
+            int kod = Convert.ToInt32(textBox2.Text);
             string query = "UPDATE Сотрудники SET Должность ='"+textBox1.Text + "' WHERE [Код сотрудника] = " + kod;
             OleDbCommand command = new OleDbCommand(query, myConnection);
             command.ExecuteNonQuery();
             MessageBox.Show("Данные обновлены!");
             this.сотрудникиTableAdapter.Fill(this.aRMDataSet1.Сотрудники);
-            textBox9.Clear();
+            textBox2.Clear();
             textBox1.Clear();
         }
 

@@ -83,13 +83,14 @@ namespace ARM_Delivery
 
         private void button3_Click(object sender, EventArgs e)
         {
-            int kod = Convert.ToInt32(textBox1.Text);
+            int kod = Convert.ToInt32(textBox2.Text);
             string query = "DELETE FROM Заказы WHERE [Код заказа] = " + kod;
             OleDbCommand command = new OleDbCommand(query, myConnection);
             command.ExecuteNonQuery();
             MessageBox.Show("Данные обновлены!");
             dataGridView1.DataSource = заказыBindingSource;
             this.заказыTableAdapter.Fill(this.aRMDataSet1.Заказы);
+            textBox2.Clear();
         }
 
         private void button4_Click(object sender, EventArgs e)

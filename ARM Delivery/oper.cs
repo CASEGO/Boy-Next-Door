@@ -12,6 +12,7 @@ namespace ARM_Delivery
 {
     public partial class oper : Form
     {
+
         public oper()
         {
             InitializeComponent();
@@ -30,7 +31,7 @@ namespace ARM_Delivery
 
         private void button3_Click(object sender, EventArgs e)
         {
-            statistics newForm = new statistics();
+            statisticOPER newForm = new statisticOPER();
             newForm.Show();
         }
     }

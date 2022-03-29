@@ -35,7 +35,7 @@ namespace ARM_Delivery
 
         private void button4_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Я овощ - мне нужна помощь!", "Внимание!");
+            MessageBox.Show("Здесь можно просмотреть отзывы.", "Внимание!");
             return;
         }
     }
