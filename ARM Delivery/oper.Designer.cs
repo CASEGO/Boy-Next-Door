@@ -76,6 +76,7 @@
             this.Name = "oper";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Оператор";
+            this.Load += new System.EventHandler(this.oper_Load);
             this.ResumeLayout(false);
 
         }
