@@ -244,7 +244,6 @@
             this.Name = "AddOrders";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Добавление заказа";
-            this.Load += new System.EventHandler(this.AddOrders_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

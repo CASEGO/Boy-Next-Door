@@ -56,5 +56,11 @@ namespace ARM_Delivery
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("                              Семейство программ SenseOne©\n\n АРМ для оператора службы доставки еды из рестона\n Для обратной связи обратитесь в службу поддержки на почте:\n                                        kolya.verik@gmail.com\n\n\n                                                Версия: 1.0", "О программе");
+            return;
+        }
     }
 }

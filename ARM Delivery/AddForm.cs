@@ -50,10 +50,11 @@ namespace ARM_Delivery
             string Phone = textBox7.Text;
             string Status = textBox3.Text;
             string Stavka = textBox2.Text;
-            string query = "INSERT INTO Сотрудники ([Код сотрудника], [ФИО сотрудника], [Кол-во часов отработанных], [Заработная плата], [Номер телефона], [Должность], [Ставка в час]) VALUES (" + kod + ",'" + Name + "','" + Time + "', '" + ZP + "','" + Phone + "','" + Status + "', '" + Stavka + "')";
+            string query = "INSERT INTO Сотрудники ([Код сотрудника], [ФИО сотрудника], [Кол-во часов отработанных], [Заработная плата], [Номер телефона], [Должность], [Ставка в час]) " +
+                "VALUES (" + kod + ",'" + Name + "','" + Time + "', '" + ZP + "','" + Phone + "','" + Status + "', '" + Stavka + "')";
             OleDbCommand command = new OleDbCommand(query, myConnection);
             command.ExecuteNonQuery();
-            MessageBox.Show("Данные обновлены!"); //string query = "INSERT INTO Сотрудники VALUES (" + kod + ", '" + Name + "', " + Time + ", " + ZP + ", " + Phone + "," + Status + "," + Stavka + (" + kod + ", '" + Name + "', " + Time + "," + ZP + "," + Phone + "," + Status + "," + Stavka + ")
+            MessageBox.Show("Данные обновлены!"); 
             this.Close();
         }
 
