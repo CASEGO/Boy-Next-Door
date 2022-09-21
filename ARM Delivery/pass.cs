@@ -41,13 +41,13 @@ namespace ARM_Delivery
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "admin" && textBox2.Text == "passadm") //При вводе пароля администратора 
+            if (textBox1.Text == "admin" && textBox2.Text == "passadm") 
             {
                 Admin af = new Admin();
                 af.Show();
                 this.Close();
             }
-            else if (textBox1.Text == "operator" && textBox2.Text == "passoper")//При вводе пароля оператора
+            else if (textBox1.Text == "operator" && textBox2.Text == "passoper")
             {
                 oper af = new oper();
                 af.Show();
@@ -55,12 +55,12 @@ namespace ARM_Delivery
             }
             else
             {
-                MessageBox.Show("Неверный логин или пароль");//При вводе неверного пароля
+                MessageBox.Show("Неверный логин или пароль");
                 textBox1.Clear();
                 textBox2.Clear();
             }
         }
-        private void button2_Click(object sender, EventArgs e)// Закрытие формы
+        private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
         }

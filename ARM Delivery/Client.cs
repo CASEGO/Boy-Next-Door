@@ -13,7 +13,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.OleDb;//Подключение библиотеки 
+using System.Data.OleDb;//Подключение библиотеки БД
+using System.Drawing;//Подключение библиотеки Печати
+using System.Drawing.Printing;
 
 
 namespace ARM_Delivery
@@ -35,35 +37,35 @@ namespace ARM_Delivery
     //⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣿⣿⣿⣿⣿⣿
     public partial class Client : Form
     {
-        public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= ARM.mdb";//Обозначение параметров подключения к БД
+        public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= ARM.mdb";
         private OleDbConnection myConnection;
         public Client()
         {
             InitializeComponent();
         }
 
-        private void Form4_Load(object sender, EventArgs e)//При загрузке происходит вывод данных с БД
+        private void Form4_Load(object sender, EventArgs e)
         {
             this.клиентыTableAdapter.Fill(this.aRMDataSet1.Клиенты);
         }
         public Client(Home f)
         {
             InitializeComponent();
-            myConnection = new OleDbConnection(connectString);//Открытие подключения к БД
+            myConnection = new OleDbConnection(connectString);
             myConnection.Open();
         }
 
-        private void button2_Click(object sender, EventArgs e)//Кнопка выхода
+        private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button3_Click(object sender, EventArgs e)//Кнопка Помощь
+        private void button3_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Для поиска в графу ввода впиши ФИО и нажми НАЙТИ КЛИЕНТА. Для удаления клиента в графу ввода впиши его код и нажми УДАЛИТЬ. Для изменения статуса впиши код клиента и нажми ИЗМЕНИТЬ СТАТУС." , "Внимание!");
             return;
         }
-        private void button1_Click(object sender, EventArgs e) //Запрос на поиск клиента
+        private void button1_Click(object sender, EventArgs e) 
         {
 
             string Name = textBox1.Text;
@@ -75,17 +77,17 @@ namespace ARM_Delivery
             myConnection.Close();
             textBox1.Clear();
         }
-        private void button4_Click(object sender, EventArgs e) //Обновление данных из БД
+        private void button4_Click(object sender, EventArgs e) 
         {
             myConnection = new OleDbConnection(connectString);
             myConnection.Open();
             dataGridView1.DataSource = клиентыBindingSource;
         }
-        private void Form4_FormClosed(object sender, FormClosedEventArgs e)//При закрытии формы соединение с БД закрывается
+        private void Form4_FormClosed(object sender, FormClosedEventArgs e)
         {
             myConnection.Close();
         }
-        private void button5_Click(object sender, EventArgs e) //Запрос на удаление клиента
+        private void button5_Click(object sender, EventArgs e)
         {
             int kod = Convert.ToInt32(textBox2.Text);
             string query = "DELETE FROM Клиенты WHERE [Код клиента] = " + kod;
@@ -96,7 +98,7 @@ namespace ARM_Delivery
             textBox2.Clear();
         }
 
-        private void button6_Click(object sender, EventArgs e) //Запрос на изменение статуса заказа у клиента
+        private void button6_Click(object sender, EventArgs e) 
         {
             int kod = Convert.ToInt32(textBox2.Text);
             bool stat = true;
@@ -113,6 +115,19 @@ namespace ARM_Delivery
 
         }
 
+        private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Bitmap bmp = new Bitmap(dataGridView1.Size.Width + 10, dataGridView1.Size.Height + 10);
 
+            //  ПЕРЕРИСОВЫВАЕТ ТАБЛИЦУ 
+            dataGridView1.DrawToBitmap(bmp, dataGridView1.Bounds);
+            e.Graphics.DrawImage(bmp, 0, 0);
+        }
+
+        private void PrintButton_Click(object sender, EventArgs e)
+        {
+            printPreviewDialog1.Document = printDocument1;
+            printPreviewDialog1.ShowDialog();
+        }
     }
 }

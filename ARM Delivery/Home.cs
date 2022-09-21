@@ -32,21 +32,21 @@ namespace ARM_Delivery
         {
             InitializeComponent();
         }
-        private void button4_Click(object sender, EventArgs e)//Кнопка "Выход"
+        private void button4_Click(object sender, EventArgs e)
         {
             this.Close(); 
         }
-        private void button3_Click(object sender, EventArgs e)//Кнопка открытия окна "авторизации"
+        private void button3_Click(object sender, EventArgs e)
         {
             pass newForm = new pass(this); 
             newForm.Show();
         }
-        private void button1_Click(object sender, EventArgs e)//Кнопка открытия окна "заказы"
+        private void button1_Click(object sender, EventArgs e)
         {
             orders newForm = new orders(this); 
             newForm.Show();
         }
-        private void button2_Click(object sender, EventArgs e) //Кнопка открытия онка "клиенты"
+        private void button2_Click(object sender, EventArgs e)
         {
             Client newForm = new Client(this);
             newForm.Show();

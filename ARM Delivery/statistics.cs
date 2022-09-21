@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.OleDb;//Подключение библиотеки
+using System.Data.OleDb;
 
 namespace ARM_Delivery
 {
@@ -28,49 +28,49 @@ namespace ARM_Delivery
     //⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣿⣿⣿⣿⣿⣿
     public partial class statistics : Form
     {
-        public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= ARM.mdb";//Обозначение БД
+        public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= ARM.mdb";
         private OleDbConnection myConnection;
         public statistics()
         {
             InitializeComponent();
-            myConnection = new OleDbConnection(connectString);//Подключение к БД
+            myConnection = new OleDbConnection(connectString);
             myConnection.Open();
         }
-        private void Form7_Load(object sender, EventArgs e)// Отображение данных с БД
+        private void Form7_Load(object sender, EventArgs e)
         {
             this.выручкаTableAdapter.Fill(this.aRMDataSet1.Выручка);
         }
         public statistics(Admin f)
         {
             InitializeComponent();
-            myConnection = new OleDbConnection(connectString);//Подключение к БД
+            myConnection = new OleDbConnection(connectString);
             myConnection.Open();
         }
 
-        private void button1_Click(object sender, EventArgs e)//Закрытие формы
+        private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)//Добавление отчета
+        private void button2_Click(object sender, EventArgs e)
         {
             Otchet af = new Otchet();
             af.Owner = this;
             af.Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)//Кнопка помощи
+        private void button3_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Здесь вы можете просмотреть, добавить и удалить отчеты!", "Внимание!");
             return;
         }
 
-        private void Form7_Activated(object sender, EventArgs e)// При активации этой формы будет обновление информации
+        private void Form7_Activated(object sender, EventArgs e)
         {
             this.выручкаTableAdapter.Fill(this.aRMDataSet1.Выручка);
         }
 
-        private void button4_Click(object sender, EventArgs e)//Кнопка удаления отчета
+        private void button4_Click(object sender, EventArgs e)
         {
             int kod = Convert.ToInt32(textBox1.Text);
             string query = "DELETE FROM Выручка WHERE [Код] = " + kod;
@@ -81,7 +81,7 @@ namespace ARM_Delivery
             textBox1.Clear();
         }
 
-        private void statistics_FormClosed(object sender, FormClosedEventArgs e)//Закрытие подключения
+        private void statistics_FormClosed(object sender, FormClosedEventArgs e)
         {
             myConnection.Close();
         }

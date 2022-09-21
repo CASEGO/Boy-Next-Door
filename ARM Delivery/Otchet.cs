@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.OleDb;//Подключение библиотеки
+using System.Data.OleDb;
 
 namespace ARM_Delivery
 {
@@ -28,21 +28,21 @@ namespace ARM_Delivery
     //⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣿⣿⣿⣿⣿⣿
     public partial class Otchet : Form
     {
-        public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= ARM.mdb"; //Обозначение БД
+        public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= ARM.mdb"; 
         private OleDbConnection myConnection;
         public Otchet()
         {
             InitializeComponent();
-            myConnection = new OleDbConnection(connectString);//Подключение к БД
+            myConnection = new OleDbConnection(connectString);
             myConnection.Open();
         }
 
-        private void button2_Click(object sender, EventArgs e)//Кнопка закрытия формы
+        private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e) //Кнопка добавить
+        private void button1_Click(object sender, EventArgs e) 
         {
             int kod = Convert.ToInt32(textBox1.Text);
             string Time = textBox2.Text;
